@@ -1,0 +1,44 @@
+<div>
+    <div class="suggestive-list">
+        <div>
+           <span class="selected-item" *ngFor="let item of selectedUser"  [ngClass]="backspace === 1 ? 'highlight' : ''">
+            <span class="name">{{ item.name | titlecase}}</span>  <span>{{ ' - '}}</span>  <span class="email">{{ item.email}}</span><span (click)=" removeSelectedUser(item)" class="material-symbols-outlined">  close
+                </span>
+        </span>  
+        </div>
+       
+        <div class="input-field">
+            <input type="text"  [(ngModel)]="captureInput" placeholder={{placeholder}}>
+            <div *ngIf="captureInput.length>0" class="input-field-list">
+                <div *ngFor="let item of listOfUsers  | search :{name : captureInput}" class="profile" (click)="setSelectedUser(item)">
+                   <span class="name">{{ item.name | titlecase}}</span>  <span>{{ ' - '}}</span>  <span class="email">{{ item.email}}</span>
+                </div>
+             </div>
+        </div>
+        
+    </div>
+    
+</div>
+
+
+<div class="features">
+     <span style="font-size: 13px; font-weight: 600;">Features</span>
+     <br>
+    <ul>
+        <li> When you click on the input field, a list of items will appear.</li>
+        <li>As you type, the list should show only items that match what you're typing.</li>
+        <li>Clicking on an item should turn it into a chip at the top, and the input field should adjust automatically.</li>
+        <li>Once an item becomes a chip, it should no longer be in the list.</li>
+        <li>Each chip has an "X" icon. Clicking it removes the chip and adds the item back to the list.</li>
+        <li class="bonus">When the input is blank and the user presses backspace, the last chip (for example, Nick Giannopoulos) should get highlighted and on again pressing backspace it should get deleted</li>
+    </ul>
+
+</div>
+
+<div class="info">
+      <span><a href="">LinkedIn</a> :-</span>
+      <span>Ashutosh Chaturvedi  (SDE -1 Inmobi Group) -  (B.tech Cse-2023)</span>
+      <br>
+      <span>Email - ashutosh765200@gmail.com</span>
+
+</div>

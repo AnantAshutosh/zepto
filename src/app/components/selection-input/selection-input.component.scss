@@ -1,0 +1,82 @@
+.profile{
+    background-color: #e6e6e6;
+    padding: 5px 10px;
+}
+.profile:hover{
+    background-color: #c7c5c5;
+    cursor: pointer;
+}
+.name{
+    font-size: 13px;
+    font-weight: 600;
+}
+.email{
+    font-size: 12px;
+    font-weight: 500;
+    color: grey;
+}
+
+.selected-item{
+    margin: 5px;
+}
+
+
+.input-field{
+    width: 240px;
+    position: relative;
+}
+.input-field-list{
+    position: absolute;
+    max-height: 145px;
+    overflow: hidden;
+}
+input{
+    width: 100%;
+    min-width: 230px;
+    padding: 2px;
+    border: none;
+}
+.suggestive-list{
+    display: flex;
+    border-bottom: 1px solid rgb(147, 54, 235);
+    width: max-content;
+}
+
+input:focus{
+    outline: none;
+}
+
+.material-symbols-outlined{
+    font-size: 15px;
+    position: relative;
+    top: 3px;
+    left: 2px;
+    color: grey;
+}
+.material-symbols-outlined:hover{
+    cursor: pointer;
+}
+
+.highlight{
+    background-color: #c7c5c5;
+    border-radius: 3px;
+    padding: 1px 5px;
+    margin-bottom: 2px;
+}
+
+
+ul{
+    font-size: 12px;
+}
+
+.bonus{
+    font-weight: 600;
+}
+
+.features{
+    margin-top: 100px;
+}
+.info{
+    margin-top: 50px;
+    font-size: 12px;
+}
